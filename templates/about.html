@@ -1,0 +1,208 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load staticfiles %}
+
+<style>
+    .header {
+        padding: 60px;
+        text-align: center;
+        background: #e65100;
+        color: white;
+        font-size: 30px;
+
+    }
+
+    .h1 {
+        font-weight: bold;
+    }
+
+    .section {
+        padding: 20px;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .boxes {
+        font-size: 20px;
+        text-align: center;
+        table-layout: fixed;
+    }
+
+    .number {
+        font-weight: bold;
+        font-size: 20px;
+        color: #ffa000;
+    }
+
+    .border {
+        border-radius: 25px;
+        padding: 10px 0;
+        width: 1050px;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="header">
+            <h1 class="h1">BİZ KİMİZ</h1>
+            <div>Müşteriye ve kanala özel çözümler üreten</div>
+            <p>Tedarik Şirketi Firmasıyız</p>
+        </div>
+    </header>
+    <div style="padding-inline: 30px;">
+        <section style="padding-inline: 100px;">
+            <div class="border">
+                <div class="row">
+                    <div style="padding-left: 30px;">
+                        <img src="{% static 'img/photo.jpeg' %}" style="height: 500px;"> </div>
+                    <div style="padding-left: 50px;">
+                        <br>
+                        <h2>Kurucu Levent ÇAKMAK</h2>
+                        <br>
+                        <p>1980 Almanya doğumludur. İlkokul, ortaokul ve lise öğrenimini Çaycuma'da tamamlamış,<br>
+                            daha sonra Gazi Üniversitesi Güzel Sanatlar Bölümünde Resim Öğretmenliği okuyarak<br>
+                            memleketi de dahil olmak üzere çoğunlukla Ankara'da öğretmen ve idareci olarak<br>
+                            Türkiye'nin lokomotif kolejlerinde çalışmıştır. 2017 yılında görevinden istifa ederek<br>
+                            ticarete unlu mamülleriyle başlamış, sonrasında e-ticaret yönetimi ve satışıyla;
+                        <ul>
+                            <li>Toptan Çay Bayiliği</li>
+                            <li>Doğal Ürünler Bayiliği</li>
+                            <li>Sağlık Ürünleri Bayiliği</li>
+                            <li>İthal Ürün Bayiliği</li>
+                        </ul>
+                        ticaret hayatına devam etmektedir.
+                        </p>
+                        <p>Firmamız ismini tek oğlu olan <t style="font-weight: bold;">EFE</t>'den almıştır.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div>
+                <br>
+                <h2 style="font-weight: bold;">Misyonumuz</h2>
+                <p>Satın alma ve lojistik süreçlerini makul şekilde yönetip geliştirerek<br>
+                    müşterilerimizin ticari sürecini kolaylaştırmak, düşük maliyetle müşteri memnuniyeti
+                    sağlamak<br>ve kendi enerjilerini sahip oldukları faaliyete yönlendirmek.</p>
+
+                <br>
+                <h2 style="font-weight: bold;">Vizyonumuz</h2>
+                <p>Batı Karadeniz bölgesinde güvenilir ve genç yapısıyla<br>sektöründe yenilikleri takip eden ve
+                    bunları müşterileriyle buluşturan,<br>en çok tercih edilen iş ortağı olmak.</p>
+
+                <br>
+                <h2 style="font-weight: bold;">Değerlerimiz</h2>
+                <p>Önce müşteri” yaklaşımıyla maksimum saygı, dürüstlük ve
+                    güvenilirlikle<br>alanda süreci yönetmek sözümüzü daima koruyacağız.</p>
+
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container" style="padding-inline: 50px;">
+                <h2 style="font-weight: bold;" class="title-right-line">Rakamlarla Efe Tedarik</h2>
+                <div class="boxes">
+                    <div class="row">
+                        <div class="col">
+                            <div class="number">120</div>
+                            <div class="title">Farklı Ürün</div>
+                        </div>
+                        <div class="col">
+                            <div class="number">2</div>
+                            <div class="title">Ticari Filo</div>
+                        </div>
+                        <div class="col">
+                            <div class="number">2x110m²</div>
+                            <div class="title">Depo</div>
+                        </div>
+                        <div class="col">
+                            <div class="number">680</div>
+                            <div class="title">Teslimat</div>
+                            <div class="subtitle">4 Şehir</div>
+                        </div>
+                        <div class="col">
+                            <div class="number">1424</div>
+                            <div class="title">Müşteri Faturası</div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="dipnot" style="font-size: 15px;">
+                                <br>
+                                * Rakamlar 2020 yılı Mayıs ayı itibariyle alınmıştır.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <br>
+        <section class="section">
+            <div class="container">
+                <h2 class="title-right-line" style="font-weight: bold;">Efe Tedarik</h2>
+                <div class="title">Batı Karadeniz'in <t style="text-decoration-line: underline;">süratle</t>
+                    büyüyen <t style="text-decoration-line: underline;">en genç</t> tedarik
+                    firması
+                </div>
+                <div class="row" style="padding-inline: 100px;">
+                    <div class="col-md-4">
+                        <div class="box">
+                            <div class="number">2</div>
+                            <div class="title">Şirket</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="box">
+                            <div class="number">12</div>
+                            <div class="title">Personel</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="box">
+                            <div class="number">2</div>
+                            <div class="title">Depo</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <br>
+        <section class="section">
+            <div class="container">
+                <h2 class="title-right-line" style="font-weight: bold;">Müşteri Grupları</h2>
+                <div class="row">
+
+                    <div class="col">
+                        <div class="title" style="color: orange; font-weight: bold;">
+                            Perakende Marketler
+                        </div>
+                        <div>ADA Market
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="title" style="color: orange; font-weight: bold;">
+                            Akaryakıt İstasyonu Marketleri
+                        </div>
+                        <div><img src="{% static 'img/istasyonlar.jpg' %}" style="height: 85px;">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="title" style="color: orange; font-weight: bold;">
+                            Tekel Marketler
+                        </div>
+                        <div>Ekomini
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+    <br><br><br>
+</body>
+
+
+{% endblock content %}

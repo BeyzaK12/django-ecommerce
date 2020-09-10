@@ -2,11 +2,14 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>{% block head_title %}{% endblock %}</title>
+  <title>Efe Tedarik</title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="{% static 'img/EfeIcon.jpg' %}" />
   {% block extra_head %}
   {% endblock %}
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
@@ -40,7 +43,6 @@
         height: 100vh;
       }
     }
-
   </style>
 </head>
 
@@ -48,29 +50,14 @@
 
 <body>
 
-    <div class="mt-5 pt-4">
-    {% if messages %}
-        {% for message in messages %}
-        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
-          {{ message }}
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        {% endfor %}
-    {% endif %}
-    </div>
+  {% block content %}
+  {% endblock content %}
 
-    {% block content %}
-    {% endblock content %}
+  {% block extra_body %}
+  {% endblock %}
 
-    {% block extra_body %}
-    {% endblock %}
-
-    {% include "footer.html" %}
-    {% include "scripts.html" %}
-
-    {% block extra_scripts %}
-    {% endblock extra_scripts %}
+  {% block extra_scripts %}
+  {% endblock extra_scripts %}
 </body>
+
 </html>
