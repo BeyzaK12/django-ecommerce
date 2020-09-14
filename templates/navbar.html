@@ -34,40 +34,40 @@
       <ul class="navbar-nav nav-flex-icons">
         <li class="nav-item" style="font-weight: bold;">
           <a class="nav-link waves-effect" href="/">
-            <span class="clearfix d-none d-sm-inline-block deep-orange-text"> Ana Sayfa </span>
+            <span class="clearfix d-none d-sm-inline-block orange-text"> Ana Sayfa </span>
           </a>
         </li>
         <li class="nav-item" style="font-weight: bold;">
           <a class="nav-link waves-effect" href="{% url 'core:products' %}">
-            <span class="clearfix d-none d-sm-inline-block deep-orange-text"> Ürünler </span>
+            <span class="clearfix d-none d-sm-inline-block orange-text"> Ürünler </span>
           </a>
         </li>
         <li class="nav-item" style="font-weight: bold;">
           <a class="nav-link waves-effect" href="{% url 'core:about' %}">
-            <span class="clearfix d-none d-sm-inline-block deep-orange-text"> Hakkımızda </span>
+            <span class="clearfix d-none d-sm-inline-block orange-text"> Hakkımızda </span>
           </a>
         </li>
         <li class="nav-item" style="font-weight: bold;">
           <a class="nav-link waves-effect" href="{% url 'core:contact' %}">
-            <span class="clearfix d-none d-sm-inline-block deep-orange-text"> İletişim </span>
+            <span class="clearfix d-none d-sm-inline-block orange-text"> İletişim </span>
           </a>
         </li>
         {% if request.user.is_authenticated %}
         <li class="nav-item" style="font-weight: bold;">
           <a class="nav-link waves-effect" href="{% url 'account_logout' %}">
-            <span class="clearfix d-none d-sm-inline-block deep-orange-text"> Çıkış Yap </span>
+            <span class="clearfix d-none d-sm-inline-block orange-text"> Çıkış Yap </span>
           </a>
         </li>
 
         {% else %}
         <li class="nav-item" style="font-weight: bold;">
           <a class="nav-link waves-effect" href="{% url 'account_login' %}">
-            <span class="clearfix d-none d-sm-inline-block deep-orange-text"> Üye Girişi </span>
+            <span class="clearfix d-none d-sm-inline-block orange-text"> Üye Girişi </span>
           </a>
         </li>
         <li class="nav-item" style="font-weight: bold;">
           <a class="nav-link waves-effect" href="{% url 'account_signup' %}">
-            <span class="clearfix d-none d-sm-inline-block deep-orange-text"> Üye Ol </span>
+            <span class="clearfix d-none d-sm-inline-block orange-text"> Üye Ol </span>
           </a>
         </li>
         {% endif %}

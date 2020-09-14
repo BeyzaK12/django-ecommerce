@@ -4,6 +4,7 @@ from django.db import models
 from django.db.models import Sum
 from django.shortcuts import reverse
 from django_countries.fields import CountryField
+from django.contrib.auth.models import User
 
 
 CATEGORY_CHOICES = (
@@ -13,12 +14,24 @@ CATEGORY_CHOICES = (
     ('K', 'Kuru')
 )
 
+ID_CHOICES = (
+    ('ID', 'TC Kimlik Numarası'),
+    ('NO', 'Vergi Numarası')
+)
+
 
 class UserProfile(models.Model):
     user = models.OneToOneField(
         settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     stripe_customer_id = models.CharField(max_length=50, blank=True, null=True)
-    one_click_purchasing = models.BooleanField(default=False)
+    # one_click_purchasing = models.BooleanField(default=False)
+    # id_choice = models.CharField(
+    #     max_length=2,
+    #     choices=ID_CHOICES,
+    #     default='ID'
+    # )
+
+    # location = models.CharField(max_length=30)
 
     def __str__(self):
         return self.user.username

@@ -13,6 +13,7 @@ from django.utils import timezone
 from django.views.generic import ListView, DetailView, View
 
 from .models import Item, UserProfile
+# from .forms import ExtendedUserCreationForm, UserProfileForm
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
@@ -30,6 +31,26 @@ def is_valid_form(values):
         if field == '':
             valid = False
     return valid
+
+
+# def register(request):
+#     if request.method == 'POST':
+#         form = ExtendedUserCreationForm(request.POST)
+#
+#         if form.is_valid():
+#             form.save()
+#
+#             username = form.cleaned_data.get('username')
+#             password = form.cleaned_data.get('password1')
+#             user = authenticate(username=username, password=password)
+#             login(request, user)
+#
+#             return redirect('index')
+#         else:
+#             form = ExtendedUserCreationForm()
+#
+#         context = {'form': form}
+#         return render(request, 'account/signup.html', context)
 
 
 class HomeView(ListView):

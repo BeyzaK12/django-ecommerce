@@ -4,185 +4,361 @@
 
 {% load staticfiles %}
 
+<style>
+  .header {
+    padding: 60px;
+    text-align: center;
+    background: #43a047;
+    color: white;
+    font-size: 30px;
+  }
 
-<!--Carousel Wrapper-->
-<div id="carousel-example-1z" class="carousel slide carousel-fade pt-4" data-ride="carousel">
+  .section {
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+  }
 
-  <!--Indicators-->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-1z" data-slide-to="1"></li>
-    <li data-target="#carousel-example-1z" data-slide-to="2"></li>
-    <li data-target="#carousel-example-1z" data-slide-to="3"></li>
-  </ol>
-  <!--/.Indicators-->
+  .h1 {
+    font-weight: bold;
+    font-size: 40px;
+  }
 
-  <!--Slides-->
-  <div class="carousel-inner" role="listbox">
+  .h2 {
+    font-weight: bold;
+    color: #e65100;
+    font-size: 30px;
+  }
 
-    <!--First slide-->
-    <div class="carousel-item active">
-      <div class="view"
-        style="background-image: url({% static 'img/background/bg0.jpg' %}); background-repeat: no-repeat; background-size: cover; background-position: center;">
+  .box-start {
+    border-style: dotted;
+    border-color: #43a047;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-inline: 20px;
+  }
 
-        <!-- Mask & flexbox options-->
-        <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
+  .box-header-start {
+    font-size: 20px;
+    font-weight: bold;
+    color: #43a047;
+  }
 
-          <!-- Content -->
-          <div class="text-center white-text mx-5 wow fadeIn">
-            <h1 class="mb-4">
-              <strong>BAŞLIK</strong>
-            </h1>
+  .box {
+    text-align: center;
+  }
 
-            <p>
-              <strong>Alt Başlık</strong>
-            </p>
+  .box-header {
+    font-size: 16px;
+    font-weight: bold;
+  }
+</style>
 
-            <p class="mb-4 d-none d-md-block">
-              <strong>Açıklama</strong>
-            </p>
+<body>
+  <div>
+    <header>
+      <div class="header">
+        <div>
+          <h1 class="h1">Tek tedarikçi, Tek fatura, Tam zamanında</h1>
+          <p style="font-size: 30px;">
+            Karmaşık tedarik zinciri süreçlerini basit, sürdürülebilir ve takip edilebilir<br>sisteme dönüştüren iş
+            modeli
+          </p>
+        </div>
+      </div>
+    </header>
 
-            <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/"
-              class="btn btn-outline-white btn-lg">Buton
-            </a>
+    <section>
+      <div class="container">
+        <div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="box-start">
+                <img src="">
+                <div class="texts">
+                  <p class="box-header-start">Tam Tedarik Zinciri</p>
+                  <p>Efe Tedarik, ithalat, sipariş ve yerine koyma yönetimi, stok takibi, depolama, elleçleme, dağıtım,
+                    iade yönetimi, raporlama ve müşteri yönetimi gibi tüm tedarik zinciri detaylarını eksiksiz olarak
+                    yönetir.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="box-start">
+                <img src="">
+                <div class="texts">
+                  <p class="box-header-start">Tanınmış Markalar</p>
+                  <p>
+                    Dünyada marka gücü kuvvetli olan ürünlerin ithalatını ve Türkiye perakende ve toptan kanal
+                    dağıtımlarını yapar. Dünyadan raflara sloganıyla tüketicileri farklı ve yeni ürün gruplarıyla
+                    buluşturur.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="box-start">
+                <img src="">
+                <div class="texts">
+                  <p class="box-header-start">Hizmet Kanalları</p>
+                  <p>Geniş ürün portföyü ve tecrübeli ekibi ile akaryakıt istasyonu marketleri, organize perakende
+                    sektörü, ev dışı tüketim, ihtisas marketleri ve geleneksel kanal bayileri gibi tüm ticari kanallara
+                    hizmet götürür.</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <!-- Content -->
+        </div>
+      </div>
+    </section>
+
+    <br>
+    <br>
+
+    <section>
+      <div class="section">
+        <div style="background-image: url(https://www.kureseltedarik.com/images/anasayfa/nasil-calisiyoruz.jpg);
+        height: 500px;background-size: cover;">
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <div style="background-color: white;">
+            <br>
+            <h2 class="h2" style="color:#42778b">Nasıl çalışıyoruz?</h2>
+            <p class="aniuk lead">Tedarikçi sayısı, ürün çeşitliliği ve sipariş potansiyeli ne kadar yüksek olursa olsun
+            </p>
+            <p>Efe Tedarik tüm tedarik zinciri sürecini müşterileri için sorunsuz olarak gerçekleştirir.</p>
+            <br>
+          </div>
 
         </div>
-        <!-- Mask & flexbox options-->
-
       </div>
-    </div>
-    <!--/First slide-->
+    </section>
 
-    <!--Second slide-->
-    <div class="carousel-item">
-      <div class="view"
-        style="background-image: url({% static 'img/background/bg1.jpg' %}); background-repeat: no-repeat; background-size: cover; background-position: center;">
+    <br>
+    <br>
 
-        <!-- Mask & flexbox options-->
-        <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
+    <section class="a-hizmet-kanallari">
+      <div class="container">
+        <h2 class="h2" style="text-align: center;">Hizmet Kanalları</h2>
+        <p class="lead">
+          Efe Tedarik özel proje ve çözümlerle farklı satış kanallarındaki müşteri grupları için verimliliği ve arzu
+          edilen hizmeti sağlamak için güçlü altyapı, grup sinerjisi, deneyimli ekip ve tecrübesini kullanan, uçtan uca
+          hizmet veren bir
+          tedarik zinciri şirketidir.
+        </p>
+        <div style="padding-inline: 50px; text-align: center;">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="box">
+                <img src="">
+                <div class="texts">
+                  <p class="box-header">
+                    PROJE YÖNETİMİ
+                  </p>
+                  <p>Firmaların ana işlerine daha fazla odaklanabilmeleri için belirlenen tüm süreçlerin yönetilmesi</p>
 
-          <!-- Content -->
-          <div class="text-center white-text mx-5 wow fadeIn">
-            <h1 class="mb-4">
-              <strong>BAŞLIK</strong>
-            </h1>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="box">
+                <img src="">
+                <div class="texts">
+                  <p class="box-header">
+                    PERAKENDE KANALI
+                  </p>
+                  <p>Belirlenmiş uygun ürünlerin doğru zamanda, eksiksiz olarak planlandığı şekilde teslim edilmesi ve
+                    raflarda yerini alması</p>
 
-            <p>
-              <strong>Alt Başlık</strong>
-            </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="box">
+                <img src="">
+                <div class="texts">
+                  <p class="box-header">
+                    EV DIŞI TÜKETİM
+                  </p>
+                  <p>Her geçen gün büyüyen ev dışı tüketim kanalında firmalara özel projelerin ve sistemlerin
+                    geliştirilmesi</p>
 
-            <p class="mb-4 d-none d-md-block">
-              <strong>Açıklama</strong>
-            </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="box">
+                <img src="">
+                <div class="texts">
+                  <p class="box-header">
+                    İTHALAT VE ÜRÜN YÖNETİMİ
+                  </p>
+                  <p>Direkt ithalatı yapılan ve yurtiçi tedarikçilerden temin edilen ürünlerin tüketicilerle
+                    buluşturulması</p>
 
-            <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/"
-              class="btn btn-outline-white btn-lg">Buton
-            </a>
+                </div>
+              </div>
+            </div>
           </div>
-          <!-- Content -->
-
         </div>
-        <!-- Mask & flexbox options-->
-
       </div>
-    </div>
-    <!--/Second slide-->
+    </section>
 
-    <!--Third slide-->
-    <div class="carousel-item">
-      <div class="view"
-        style="background-image: url({% static 'img/background/bg2.jpg' %}); background-repeat: no-repeat; background-size: cover; background-position: center;">
+    <br>
+    <br>
 
-        <!-- Mask & flexbox options-->
-        <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
-
-          <!-- Content -->
-          <div class="text-center white-text mx-5 wow fadeIn">
-            <h1 class="mb-4">
-              <strong>BAŞLIK</strong>
-            </h1>
-
-            <p>
-              <strong>Alt Başlık</strong>
-            </p>
-
-            <p class="mb-4 d-none d-md-block">
-              <strong>Açıklama</strong>
-            </p>
-
-            <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/"
-              class="btn btn-outline-white btn-lg">Buton
-            </a>
+    <section>
+      <div class="section">
+        <h2 class="h2">
+          Efe Tedarik’in Sizi Memnun Edecek<br>Tedarik Zinciri Operasyonunda Neler Oluyor?
+        </h2>
+        <p class="lead">
+          Efe Tedarik ithalat, sipariş ve yerine koyma yönetimi,<br>stok takibi, depolama, elleçleme, dağıtım,
+          iade yönetimi, raporlama ve müşteri yönetimi gibi<br>tüm tedarik zinciri detaylarını eksiksiz olarak yönetir
+          ve müşterilerinin<br>bu süreçlerle zaman harcamamasını sağlayarak ana işlerine yönelmelerine imkan verir.
+        </p>
+        <div class="wrap">
+          <div class="row">
+            <div style="padding-inline: 200px; text-align: center; font-weight: bold; padding-top: 10px;">
+              <div class="row">
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                  <div>
+                    <img src="https://www.kureseltedarik.com/images/surecler/projelendirme.svg" style="height: 100px;">
+                    <div>PROJELENDİRME</div>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                  <div>
+                    <img src="https://www.kureseltedarik.com/images/surecler/tedarik.svg" style="height: 100px;">
+                    <div>TEDARİK</div>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                  <div>
+                    <img src="https://www.kureseltedarik.com/images/surecler/satinalma.svg" style="height: 100px;">
+                    <div>SATINALMA</div>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                  <div>
+                    <img src="https://www.kureseltedarik.com/images/surecler/depolama.svg" style="height: 100px;">
+                    <div>DEPOLAMA</div>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                  <div style="padding-top: 10px;">
+                    <img src="https://www.kureseltedarik.com/images/surecler/siparis.svg" style="height: 100px;">
+                    <div>SİPARİŞ VE TALEP</div>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                  <div style="padding-top: 10px;">
+                    <img src="https://www.kureseltedarik.com/images/surecler/teslimat.svg" style="height: 100px;">
+                    <div>TESLİMAT</div>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                  <div style="padding-top: 10px;">
+                    <img src="https://www.kureseltedarik.com/images/surecler/iade.svg" style="height: 100px;">
+                    <div>İADE</div>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                  <div style="padding-top: 10px;">
+                    <img src="https://www.kureseltedarik.com/images/surecler/muhasebe.svg" style="height: 100px;">
+                    <div>MÜŞTERİ HİZMETLERİ</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <!-- Content -->
-
         </div>
-        <!-- Mask & flexbox options-->
-
       </div>
-    </div>
-    <!--/Third slide-->
+    </section>
 
-    <!--/Fourth slide-->
-    <div class="carousel-item">
-      <div class="view"
-        style="background-image: url({% static 'img/background/bg3.jpg' %}); background-repeat: no-repeat; background-size: cover; background-position: center;">
+    <br>
+    <br>
 
-        <!-- Mask & flexbox options-->
-        <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
+    <section class="section">
+      <div>
+        <h2 class="h2">Efe Tedarik Size Hangi Avantajları Sağlıyor?</h2>
+        <div>
+          <h3>Bırakın zor işleri biz yapalım</h3>
+          <p>
+            Efe Tedarik tedarik zinciri olarak temel amacımız tüm müşterilerimizin kendi alanlarındaki<br>hizmet ve
+            satış
+            imkanlarına yönelik gelişim fırsatlarını değerlendirmelerini sağlamak<br>ve ilgi alanlarını ana işlerine
+            çevirmelerine
+            imkan vermek.
+          </p>
+          <img src="https://www.kureseltedarik.com/images/avantajlar/avantajlar-boxes.png" style="width: 50%">
+        </div>
+      </div>
+    </section>
 
-          <!-- Content -->
-          <div class="text-center white-text mx-5 wow fadeIn">
-            <h1 class="mb-4">
-              <strong>BAŞLIK</strong>
-            </h1>
+    <br>
+    <br>
 
-            <p>
-              <strong>Alt Başlık</strong>
-            </p>
-
-            <p class="mb-4 d-none d-md-block">
-              <strong>Açıklama</strong>
-            </p>
-
-            <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/"
-              class="btn btn-outline-white btn-lg">Buton
-            </a>
+    </section>
+    <section>
+      <div class="section">
+        <h2 class="h2">Ürünlerimiz</h2>
+        <p class="lead">Pazarın ve müşterilerimizin ihtiyaç ve beklentilerine göre farklı kategorilerde ithalatı ve iç
+          piyasa alımları yapılan harika ürünleri keşfedin</p>
+        <div class="row" style="padding-inline: 40px;">
+          <div class="col-md-4">
+            <img src="{% static 'img/products/nutella.jpg' %}">
+            <p style="font-weight: bold; font-style: oblique;">Nutella</p>
           </div>
-          <!-- Content -->
-
+          <div class="col-md-4">
+            <img src="{% static 'img/products/kinder_happy_hippo.jpg' %}">
+            <p style="font-weight: bold; font-style: oblique;">Kinder Happy Hippo</p>
+          </div>
+          <div class="col-md-4">
+            <img src="{% static 'img/products/original_gourmet_chocolate_fusion.jpg' %}">
+            <p style="font-weight: bold; font-style: oblique;">Original Gourmet<br>Chocolate Fusion</p>
+          </div>
         </div>
-        <!-- Mask & flexbox options-->
 
+        <a href="{% url 'core:products' %}" style="color: orange; font-style: italic;" class="btn-link">Efe Tedarik
+          Ürünlerini Keşfetmek İçin Tıkla</a>
       </div>
-    </div>
-    <!--/Fourth slide-->
+    </section>
+
+    <br>
+    <br>
+
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <h2 class="h2">Farkımızı Görmeye <br> Ne Dersiniz?</h2>
+            <p>Bize işinizi ve ne istediğinizi anlatın,<br>sizi yormadan işinize nasıl değer katacağımızı
+              anlatalım.</p>
+          </div>
+          <div class="col-md-5">
+            <div class="box">
+              <div style="height: 35px;"></div>
+              <t style="font-weight: bold;">+90 506 543 2808</t>
+              <div style="height: 10px;"></div>
+              <a href="{% url 'core:contact' %}" class="btn orange" style="color: white;">İletişim
+                Bilgilerimize Ulaşmak İçin
+                Tıklayın</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </div>
-  <!--/.Slides-->
+</body>
 
-  <!--Controls-->
-  <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-  <!--/.Controls-->
-
-</div>
-<!--/.Carousel Wrapper-->
-
-<!--Main layout-->
-<main>
-  <div class="container">
-
-  </div>
-</main>
-<!--Main layout-->
+<br>
+<br>
+<br>
 
 {% endblock content %}
