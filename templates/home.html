@@ -6,11 +6,15 @@
 
 <style>
   .header {
-    padding: 60px;
-    text-align: center;
-    background: #43a047;
+    padding-inline: 60px;
+    padding-top: 100px;
     color: white;
     font-size: 30px;
+    background-image: url("{% static 'img/background/truck3.jpg' %}");
+    background-size: cover;
+    background-position: center;
+    height: 380px;
+
   }
 
   .section {
@@ -22,17 +26,19 @@
   .h1 {
     font-weight: bold;
     font-size: 40px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
   }
 
   .h2 {
     font-weight: bold;
-    color: #e65100;
+    color: #2C7000;
     font-size: 30px;
   }
 
   .box-start {
     border-style: dotted;
-    border-color: #43a047;
+    border-color: #2a7c2e;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-inline: 20px;
@@ -41,7 +47,7 @@
   .box-header-start {
     font-size: 20px;
     font-weight: bold;
-    color: #43a047;
+    color: #2a7c2e;
   }
 
   .box {
@@ -52,6 +58,13 @@
     font-size: 16px;
     font-weight: bold;
   }
+
+  .nasil-calisiyoruz {
+    background-image: url("{% static 'img/background/truck.jpg' %}");
+    background-size: cover;
+    background-position: bottom;
+    height: 550px;
+  }
 </style>
 
 <body>
@@ -60,13 +73,19 @@
       <div class="header">
         <div>
           <h1 class="h1">Tek tedarikçi, Tek fatura, Tam zamanında</h1>
-          <p style="font-size: 30px;">
-            Karmaşık tedarik zinciri süreçlerini basit, sürdürülebilir ve takip edilebilir<br>sisteme dönüştüren iş
+          <p style="font-size: 30px; -webkit-text-stroke-width: 0.5px;
+          -webkit-text-stroke-color: white;">
+            Karmaşık tedarik zinciri süreçlerini basit, sürdürülebilir ve<br>takip edilebilir sisteme dönüştüren iş
             modeli
           </p>
         </div>
       </div>
     </header>
+
+    <br>
+    <br>
+    <br>
+    <br>
 
     <section>
       <div class="container">
@@ -117,17 +136,12 @@
 
     <section>
       <div class="section">
-        <div style="background-image: url(https://www.kureseltedarik.com/images/anasayfa/nasil-calisiyoruz.jpg);
-        height: 500px;background-size: cover;">
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
+        <div class="nasil-calisiyoruz">
           <br>
           <div style="background-color: white;">
             <br>
-            <h2 class="h2" style="color:#42778b">Nasıl çalışıyoruz?</h2>
+            <br>
+            <h2 class="h2" style="color:#796c17">Nasıl çalışıyoruz?</h2>
             <p class="aniuk lead">Tedarikçi sayısı, ürün çeşitliliği ve sipariş potansiyeli ne kadar yüksek olursa olsun
             </p>
             <p>Efe Tedarik tüm tedarik zinciri sürecini müşterileri için sorunsuz olarak gerçekleştirir.</p>
@@ -227,49 +241,49 @@
               <div class="row">
                 <div class="col-xs-6 col-sm-3 col-md-3">
                   <div>
-                    <img src="https://www.kureseltedarik.com/images/surecler/projelendirme.svg" style="height: 100px;">
+                    <img src="{% static 'img/icons/project-i.jpg' %}" style="height: 100px; border-radius: 50%;">
                     <div>PROJELENDİRME</div>
                   </div>
                 </div>
                 <div class="col-xs-6 col-sm-3 col-md-3">
                   <div>
-                    <img src="https://www.kureseltedarik.com/images/surecler/tedarik.svg" style="height: 100px;">
+                    <img src="{% static 'img/icons/delivery-i.jpg' %}" style="height: 100px; border-radius: 50%;">
                     <div>TEDARİK</div>
                   </div>
                 </div>
-                <div class="col-xs-6 col-sm-3 col-md-3">
+                <div class=" col-xs-6 col-sm-3 col-md-3">
                   <div>
-                    <img src="https://www.kureseltedarik.com/images/surecler/satinalma.svg" style="height: 100px;">
+                    <img src="{% static 'img/icons/deal-i.jpg' %}" style="height: 100px; border-radius: 50%;">
                     <div>SATINALMA</div>
                   </div>
                 </div>
-                <div class="col-xs-6 col-sm-3 col-md-3">
+                <div class=" col-xs-6 col-sm-3 col-md-3">
                   <div>
-                    <img src="https://www.kureseltedarik.com/images/surecler/depolama.svg" style="height: 100px;">
+                    <img src="{% static 'img/icons/depot-i.jpg' %}" style="height: 100px; border-radius: 50%;">
                     <div>DEPOLAMA</div>
                   </div>
                 </div>
-                <div class="col-xs-6 col-sm-3 col-md-3">
+                <div class=" col-xs-6 col-sm-3 col-md-3">
                   <div style="padding-top: 10px;">
-                    <img src="https://www.kureseltedarik.com/images/surecler/siparis.svg" style="height: 100px;">
+                    <img src="{% static 'img/icons/order-i.jpg' %}" style="height: 100px; border-radius: 50%;">
                     <div>SİPARİŞ VE TALEP</div>
                   </div>
                 </div>
-                <div class="col-xs-6 col-sm-3 col-md-3">
+                <div class=" col-xs-6 col-sm-3 col-md-3">
                   <div style="padding-top: 10px;">
-                    <img src="https://www.kureseltedarik.com/images/surecler/teslimat.svg" style="height: 100px;">
+                    <img src="{% static 'img/icons/delivery-d-i.jpg' %}" style="height: 100px; border-radius: 50%;">
                     <div>TESLİMAT</div>
                   </div>
                 </div>
-                <div class="col-xs-6 col-sm-3 col-md-3">
+                <div class=" col-xs-6 col-sm-3 col-md-3">
                   <div style="padding-top: 10px;">
-                    <img src="https://www.kureseltedarik.com/images/surecler/iade.svg" style="height: 100px;">
+                    <img src="{% static 'img/icons/return-i.jpg' %}" style="height: 100px; border-radius: 50%;">
                     <div>İADE</div>
                   </div>
                 </div>
-                <div class="col-xs-6 col-sm-3 col-md-3">
+                <div class=" col-xs-6 col-sm-3 col-md-3">
                   <div style="padding-top: 10px;">
-                    <img src="https://www.kureseltedarik.com/images/surecler/muhasebe.svg" style="height: 100px;">
+                    <img src="{% static 'img/icons/call-i.jpg' %}" style="height: 100px; border-radius: 50%;">
                     <div>MÜŞTERİ HİZMETLERİ</div>
                   </div>
                 </div>
@@ -283,19 +297,29 @@
     <br>
     <br>
 
-    <section class="section">
+    <section class=" section">
       <div>
         <h2 class="h2">Efe Tedarik Size Hangi Avantajları Sağlıyor?</h2>
         <div>
           <h3>Bırakın zor işleri biz yapalım</h3>
           <p>
-            Efe Tedarik tedarik zinciri olarak temel amacımız tüm müşterilerimizin kendi alanlarındaki<br>hizmet ve
+            Efe Tedarik tedarik zinciri olarak temel amacımız tüm müşterilerimizin kendi
+            alanlarındaki<br>hizmet ve
             satış
-            imkanlarına yönelik gelişim fırsatlarını değerlendirmelerini sağlamak<br>ve ilgi alanlarını ana işlerine
+            imkanlarına yönelik gelişim fırsatlarını değerlendirmelerini sağlamak<br>ve ilgi
+            alanlarını ana işlerine
             çevirmelerine
             imkan vermek.
           </p>
-          <img src="https://www.kureseltedarik.com/images/avantajlar/avantajlar-boxes.png" style="width: 50%">
+          <ul style="list-style-type: circle;">
+            <li>Kaynak verimliliğini arttırır</li>
+            <li>Teslimat performansını arttırır</li>
+            <li>Kalite ve fiyat dengesine uygun seçim sağlar</li>
+            <li>Satınalmada kalite ve rekabet dengesini kurar</li>
+            <li>Finans kontrolü ve dengesi ile olası riskleri azaltır</li>
+            <li>Beklenmeyen riskleri kaldırır ve müşteri memnuniyetine<br>odaklanma imkanı
+              sağlar</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -324,7 +348,7 @@
           </div>
         </div>
 
-        <a href="{% url 'core:products' %}" style="color: orange; font-style: italic;" class="btn-link">Efe Tedarik
+        <a href="{% url 'core:products' %}" style="color: #1cac23; font-style: italic;" class="btn-link">Efe Tedarik
           Ürünlerini Keşfetmek İçin Tıkla</a>
       </div>
     </section>
@@ -345,7 +369,7 @@
               <div style="height: 35px;"></div>
               <t style="font-weight: bold;">+90 506 543 2808</t>
               <div style="height: 10px;"></div>
-              <a href="{% url 'core:contact' %}" class="btn orange" style="color: white;">İletişim
+              <a href="{% url 'core:contact' %}" class="btn green" style="color: white;">İletişim
                 Bilgilerimize Ulaşmak İçin
                 Tıklayın</a>
             </div>
