@@ -1,0 +1,31 @@
+{% extends "account/base.html" %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block head_title %}{% trans "Sign In" %}{% endblock %}
+
+{% block content %}
+<br>
+<main>
+  <div class="container">
+    <section class="mb-4">
+      <div class="row wow fadeIn">
+        <div class='col-6 offset-3'>
+          <h1>{% trans "Üye Girişi" %}</h1>
+
+          <p>Henüz bir hesabınız yoksa,
+            <a href="{% url 'users:signup' %}">Buradan</a> üye olabilirsiniz.</p>
+
+          <form method="post">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button class="btn" style="background-color:#ffbb33; color:white; font-weight: bold;" type="submit">Giriş
+              Yap</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+{% endblock %}

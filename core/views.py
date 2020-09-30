@@ -12,17 +12,17 @@ from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
 from django.views.generic import ListView, DetailView, View
 
-from .models import Item, UserProfile
-# from .forms import ExtendedUserCreationForm, UserProfileForm
-
-stripe.api_key = settings.STRIPE_SECRET_KEY
+from .models import Ürün, Öne_Çıkanlar_Ürün
 
 
 def products(request):
     context = {
-        'items': Item.objects.all()
+        'items': Ürün.objects.all()
     }
     return render(request, "products.html", context)
+
+
+stripe.api_key = settings.STRIPE_SECRET_KEY
 
 
 def is_valid_form(values):
@@ -33,52 +33,38 @@ def is_valid_form(values):
     return valid
 
 
-# def register(request):
-#     if request.method == 'POST':
-#         form = ExtendedUserCreationForm(request.POST)
-#
-#         if form.is_valid():
-#             form.save()
-#
-#             username = form.cleaned_data.get('username')
-#             password = form.cleaned_data.get('password1')
-#             user = authenticate(username=username, password=password)
-#             login(request, user)
-#
-#             return redirect('index')
-#         else:
-#             form = ExtendedUserCreationForm()
-#
-#         context = {'form': form}
-#         return render(request, 'account/signup.html', context)
-
-
 class HomeView(ListView):
-    model = Item
+    model = Ürün
     paginate_by = 10
     template_name = "home.html"
 
 
 class ProductsView(ListView):
-    model = Item
+    model = Ürün
     paginate_by = 10
     template_name = "products.html"
 
 
+class ProductsFView(ListView):
+    model = Öne_Çıkanlar_Ürün
+    paginate_by = 10
+    template_name = "products_ö.html"
+
+
 class AboutView(ListView):
-    model = Item
+    model = Ürün
     paginate_by = 10
     template_name = "about.html"
 
 
 class ContactView(ListView):
-    model = Item
+    model = Ürün
     paginate_by = 10
     template_name = "contact.html"
 
 
 class ItemDetailView(DetailView):
-    model = Item
+    model = Ürün
     template_name = "product.html"
 
 # class CheckoutView(View):
@@ -402,7 +388,7 @@ class ItemDetailView(DetailView):
 
 # @login_required
 # def add_to_cart(request, slug):
-#     item = get_object_or_404(Item, slug=slug)
+#     item = get_object_or_404(Ürün, slug=slug)
 #     order_item, created = OrderItem.objects.get_or_create(
 #         item=item,
 #         user=request.user,
@@ -432,7 +418,7 @@ class ItemDetailView(DetailView):
 
 # @login_required
 # def remove_from_cart(request, slug):
-#     item = get_object_or_404(Item, slug=slug)
+#     item = get_object_or_404(Ürün, slug=slug)
 #     order_qs = Order.objects.filter(
 #         user=request.user,
 #         ordered=False
@@ -460,7 +446,7 @@ class ItemDetailView(DetailView):
 #
 # @login_required
 # def remove_single_item_from_cart(request, slug):
-#     item = get_object_or_404(Item, slug=slug)
+#     item = get_object_or_404(Ürün, slug=slug)
 #     order_qs = Order.objects.filter(
 #         user=request.user,
 #         ordered=False

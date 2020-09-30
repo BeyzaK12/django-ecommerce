@@ -5,9 +5,12 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts/', include('allauth.urls')),
-    path('', include('core.urls', namespace='core'))
+    path('', include('django.contrib.auth.urls')),
+    path('', include('core.urls', namespace='core')),
+    path('', include(('users.urls', 'app_name'), namespace='users')),
 ]
+
+app_name = 'users'
 
 if settings.DEBUG:
     import debug_toolbar

@@ -1,10 +1,4 @@
-from django import forms, ModelForm
-from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserCreationForm
-from .models import UserProfile
-
-from django_countries.fields import CountryField
-from django_countries.widgets import CountrySelectWidget
+from django import forms
 
 # PAYMENT_CHOICES = (
 #     ('S', 'Stripe'),

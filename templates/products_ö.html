@@ -1,0 +1,193 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load staticfiles %}
+
+<style>
+    .header {
+        padding: 60px;
+        text-align: center;
+        background-image: url("{% static 'img/background/market2.jpg' %}");
+        background-size: cover;
+        color: white;
+        font-size: 30px;
+    }
+
+    .section {
+        text-align: center;
+        padding-inline: 100px;
+    }
+
+    .h1 {
+        font-weight: bold;
+        font-size: 40px;
+    }
+
+    .h2 {
+        font-weight: bold;
+        color: #e65100;
+        font-size: 30px;
+    }
+
+    .h3 {
+        font-weight: bold;
+        color: #e65100;
+        font-size: 25px;
+    }
+
+    .box-start {
+        border-style: dotted;
+        border-color: orange;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-inline: 20px;
+    }
+
+    .box-header-start {
+        font-size: 20px;
+        font-weight: bold;
+        color: #FF8800;
+    }
+
+    .box {
+        text-align: center;
+    }
+
+    .box-header {
+        font-size: 16px;
+        font-weight: bold;
+    }
+</style>
+
+<main>
+    <header>
+        <div class="header">
+            <div class="texts">
+                <h1 class="h1">EFE TEDARİK ÜRÜNLERİ</h1>
+                <h2 style="font-weight: bold; font-size: 25px; -webkit-text-stroke-width: 0.5px;
+                -webkit-text-stroke-color: white;">Sizi mutlu eden ürünleri biz getiriyoruz</h2>
+                <div style="font-size: 25px; -webkit-text-stroke-width: 0.5px;
+                -webkit-text-stroke-color: white;">Pazarın ve müşterilerimizin ihtiyaç ve beklentilerine göre<br>farklı
+                    kategorilerde ithalatı ve iç piyasa alımları yapılan harika ürünleri keşfedin</div>
+            </div>
+        </div>
+    </header>
+
+    <div>
+        <div>
+            <section>
+
+                <div class="container">
+                    <p style="text-align: center; font-size: 20px; font-weight: bold;">Kalite ve fiyat dengesini
+                        gözeterek yaptığımız satın almalarla sizi yerel ve
+                        ulusal markalarla buluşturuyoruz.</p>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-5 col-md-offset-5">
+
+                        </div>
+                    </div>
+                    {% for item in object_list %}
+                    <div>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div> <img src="{{ item.fotoğraf.url }}"
+                                        style="padding-left: 100px; height: auto; width: 100%;"
+                                        href="{{ item.get_absolute_url }}">
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <h2 class="h2" href="{{ item.get_absolute_url }}">{{ item.isim }}</h2>
+                                <p href="{{ item.get_absolute_url }}">{{ item.açıklama }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    {% endfor %}
+                    <!--urun end-->
+                </div>
+
+            </section>
+
+            <br>
+            <br>
+
+            <section class="section">
+                <h2 style="font-weight: bold;">Ürün Kategorilerimiz</h2>
+                <div class="row">
+                    <div class="col-xs-12 col-md-4 col-sm-2">
+                        <ul style="list-style: none;">
+                            <h3 class="h3">Atıştırmalık</h3>
+                            <li>Sakız</li>
+                            <li>Şekerleme</li>
+                            <li>Kuruyemiş</li>
+                            <li>Bisküvi ve Kekler</li>
+                            <li>Çikolata, Bar ,Gofret</li>
+                            <li>Diyet ve Doğal Ürünler</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-md-4 col-sm-2">
+                        <ul style="list-style: none;">
+                            <h3 class="h3">İçecek</h3>
+                            <li>Su</li>
+                            <li>Maden Suyu</li>
+                            <li>Meyve Suyu</li>
+                            <li>Gazlı İçecek</li>
+                            <li>Sıcak İçecek</li>
+                            <li>Enerji İçeceği</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-md-4 col-sm-2">
+                        <ul style="list-style: none;">
+                            <h3 class="h3">Dondurulmuş Ürünler</h3>
+                            <li>Sebze-Meyve</li>
+                            <li>Hamur İşleri</li>
+                            <li>Hazır Yiyecekler</li>
+                            <li>İşlenmiş Et & Balık</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-md-4 col-sm-2">
+                        <ul style="list-style: none;">
+                            <h3 class="h3">Taze Ürünler</h3>
+                            <li>Zeytin</li>
+                            <li>Yumurta</li>
+                            <li>Süt ve Sütlü Ürünler</li>
+                            <li>Reçel & Tahin-Pekmez</li>
+                            <li>Ekmek & Unlu Mamüller</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-md-4 col-sm-2">
+                        <ul style="list-style: none;">
+                            <h3 class="h3">Kuru Gıda</h3>
+                            <li>Şeker-Tuz</li>
+                            <li>Sıvı Yağlar</li>
+                            <li>Konserve-Turşu</li>
+                            <li>Salça-Harç-Çorba</li>
+                            <li>Ketçap-Mayonez-Sos</li>
+                            <li>Bakliyat-Makarna-Pirinç</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-md-4 col-sm-2">
+                        <ul style="list-style: none;">
+                            <h3 class="h3">Gıda Dışı Ürünler</h3>
+                            <li>Sağlık Ürünleri</li>
+                            <li>Kağıt Ürünleri</li>
+                            <li>Temizlik Ürünleri</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </section>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+</main>
+
+{% endblock content %}

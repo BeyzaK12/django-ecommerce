@@ -22,8 +22,6 @@
     .h1 {
         font-weight: bold;
         font-size: 40px;
-        -webkit-text-stroke-width: 2px;
-        -webkit-text-stroke-color: white;
     }
 
     .h2 {
@@ -67,7 +65,7 @@
         <div class="header">
             <div class="texts">
                 <h1 class="h1">EFE TEDARİK ÜRÜNLERİ</h1>
-                <h2 style="font-weight: bold; font-size: 25px; -webkit-text-stroke-width: 1px;
+                <h2 style="font-weight: bold; font-size: 25px; -webkit-text-stroke-width: 0.5px;
                 -webkit-text-stroke-color: white;">Sizi mutlu eden ürünleri biz getiriyoruz</h2>
                 <div style="font-size: 25px; -webkit-text-stroke-width: 0.5px;
                 -webkit-text-stroke-color: white;">Pazarın ve müşterilerimizin ihtiyaç ve beklentilerine göre<br>farklı
@@ -75,6 +73,7 @@
             </div>
         </div>
     </header>
+
     {% if request.user.is_authenticated %}
     <div class="container">
         <!--Navbar-->
@@ -135,13 +134,10 @@
                 {% for item in object_list %}
                 <div class="col-lg-3 col-md-6 mb-4">
 
-                    <div class="card">
+                    <div class="card" style="height: 400px; width: 99%;">
 
                         <div class="view overlay">
-                            {% comment %} <img
-                                src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12.jpg"
-                                class="card-img-top" {% endcomment %} <img src="{{ item.image.url }}"
-                                class="card-img-top">
+                            <img src="{{ item.fotoğraf.url }}" class="card-img-top">
                             <a href="{{ item.get_absolute_url }}">
                                 <div class="mask rgba-white-slight"></div>
                             </a>
@@ -153,17 +149,17 @@
                             </a>
                             <h5>
                                 <strong>
-                                    <a href="{{ item.get_absolute_url }}" class="dark-grey-text">{{ item.title }}
+                                    <a href="{{ item.get_absolute_url }}" class="dark-grey-text">{{ item.isim }}
                                     </a>
                                 </strong>
                             </h5>
 
                             <h4 class="font-weight-bold deep-orange-text">
                                 <strong>
-                                    {% if item.discount_price %}
-                                    {{ item.discount_price }}
+                                    {% if item.indirimli_fiyat %}
+                                    {{ item.indirimli_fiyat }}
                                     {% else %}
-                                    {{ item.price }}
+                                    {{ item.fiyat }}
                                     {% endif %}
                                 </strong>₺
                             </h4>
@@ -212,112 +208,12 @@
         </nav>
         {% endif %}
     </div>
-
     {% else %}
-    <div>
-        <div>
-            <section>
-
-                <div class="container">
-                    <p style="text-align: center; font-size: 20px; font-weight: bold;">Kalite ve fiyat dengesini
-                        gözeterek yaptığımız satın almalarla sizi yerel ve
-                        ulusal markalarla buluşturuyoruz.</p>
-                    <br>
-                    <div class="row">
-                        <div class="col-md-5 col-md-offset-5">
-
-                        </div>
-                    </div>
-                    <div class="urun">
-                        <div class="row">
-                            <div class="col-md-5">
-                                <div> <img src="{% static 'img/products/nutella.jpg' %}" style="padding-left: 100px;">
-                                </div>
-                            </div>
-                            <div class="col-md-5">
-                                <h2 class="h2">Nutella</h2>
-                                <p>
-                                    -Ürün Açıklaması-
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--urun end-->
-                </div>
-            </section>
-
-            <br>
-            <br>
-
-            <section class="section">
-                <h2 style="font-weight: bold;">Ürün Kategorilerimiz</h2>
-                <div class="row">
-                    <div class="col-xs-12 col-md-4 col-sm-2">
-                        <ul style="list-style: none;">
-                            <h3 class="h3">Atıştırmalık</h3>
-                            <li>Sakız</li>
-                            <li>Şekerleme</li>
-                            <li>Kuruyemiş</li>
-                            <li>Bisküvi ve Kekler</li>
-                            <li>Çikolata, Bar ,Gofret</li>
-                            <li>Diyet ve Doğal Ürünler</li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-12 col-md-4 col-sm-2">
-                        <ul style="list-style: none;">
-                            <h3 class="h3">İçecek</h3>
-                            <li>Su</li>
-                            <li>Maden Suyu</li>
-                            <li>Meyve Suyu</li>
-                            <li>Gazlı İçecek</li>
-                            <li>Sıcak İçecek</li>
-                            <li>Enerji İçeceği</li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-12 col-md-4 col-sm-2">
-                        <ul style="list-style: none;">
-                            <h3 class="h3">Dondurulmuş Ürünler</h3>
-                            <li>Sebze-Meyve</li>
-                            <li>Hamur İşleri</li>
-                            <li>Hazır Yiyecekler</li>
-                            <li>İşlenmiş Et & Balık</li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-12 col-md-4 col-sm-2">
-                        <ul style="list-style: none;">
-                            <h3 class="h3">Taze Ürünler</h3>
-                            <li>Zeytin</li>
-                            <li>Yumurta</li>
-                            <li>Süt ve Sütlü Ürünler</li>
-                            <li>Reçel & Tahin-Pekmez</li>
-                            <li>Ekmek & Unlu Mamüller</li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-12 col-md-4 col-sm-2">
-                        <ul style="list-style: none;">
-                            <h3 class="h3">Kuru Gıda</h3>
-                            <li>Şeker-Tuz</li>
-                            <li>Sıvı Yağlar</li>
-                            <li>Konserve-Turşu</li>
-                            <li>Salça-Harç-Çorba</li>
-                            <li>Ketçap-Mayonez-Sos</li>
-                            <li>Bakliyat-Makarna-Pirinç</li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-12 col-md-4 col-sm-2">
-                        <ul style="list-style: none;">
-                            <h3 class="h3">Gıda Dışı Ürünler</h3>
-                            <li>Sağlık Ürünleri</li>
-                            <li>Kağıt Ürünleri</li>
-                            <li>Temizlik Ürünleri</li>
-                        </ul>
-                    </div>
-                </div>
-
-
-            </section>
-        </div>
-    </div>
+    <section class="section" style="font-size: 30px;">
+        Ürünlerimizi görebilmek için üye olmanız gerekmektedir.<br>
+        Üye olmadan görebileceğiniz ürünler için:<br>
+        <a href="{% url 'core:products_ö' %}">Öne Çıkan Ürünler</a>
+    </section>
     {% endif %}
 
     <br>

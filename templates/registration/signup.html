@@ -1,0 +1,32 @@
+{% extends "account/base.html" %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block head_title %}{% trans "Signup" %}{% endblock %}
+
+{% block content %}
+
+<br>
+<main>
+  <div class="container">
+    <section class="mb-4">
+      <div class="row wow fadeIn">
+        <div class='col-6 offset-3'>
+          <h1>{% trans "Üye Ol" %}</h1>
+          <p>Bir hesabınız var mı? <a href="{% url 'login' %}">Buradan</a> giriş
+            yapabilirsiniz.</p>
+          <p>ÖNEMLİ UYARI<br>Bireysel üyelikler için TC numaranızı,<br>
+            kurumsal üyelikler için VERGİ numaranızı girmeniz zorunludur.<br>
+            İkisinin de boş olması durumunda üyelik silinecektir.</p>
+          <form method="post">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button class="btn" style="background-color:#ffbb33; color:white; font-weight: bold;" type="submit">Üye
+              Ol</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+{% endblock %}
