@@ -11,23 +11,24 @@ class CustomUserAdmin(UserAdmin):
     add_form = CustomUserCreationForm
     form = CustomUserChangeForm
     model = CustomUser
-    list_display = ('email', 'kimlik_numarası', 'vergi_numarası', 'first_name',
+    list_display = ('email', 'phone_number', 'kimlik_numarası', 'vergi_numarası', 'first_name',
                     'last_name', 'is_staff', 'is_active',)
-    list_filter = ('email', 'kimlik_numarası', 'vergi_numarası', 'first_name',
+    list_filter = ('email', 'phone_number', 'kimlik_numarası', 'vergi_numarası', 'first_name',
                    'last_name', 'is_staff', 'is_active',)
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
-        ('Permissions', {'fields': ('kimlik_numarası', 'vergi_numarası', 'first_name',
+        ('Permissions', {'fields': ('phone_number', 'kimlik_numarası', 'vergi_numarası', 'first_name',
                                     'last_name', 'is_staff', 'is_active')}),
     )
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
-            'fields': ('email', 'password1', 'password2', 'kimlik_numarası', 'vergi_numarası', 'first_name', 'last_name', 'is_staff', 'is_active')}
+            'fields': ('email', 'password1', 'password2', 'phone_number', 'kimlik_numarası', 'vergi_numarası', 'first_name', 'last_name', 'is_staff', 'is_active')}
          ),
     )
-    search_fields = ('email', 'kimlik_numarası', 'vergi_numarası')
-    ordering = ('email', 'kimlik_numarası', 'vergi_numarası')
+    search_fields = ('email', 'phone_number',
+                     'kimlik_numarası', 'vergi_numarası')
+    ordering = ('email', 'phone_number', 'kimlik_numarası', 'vergi_numarası')
 
 
 admin.site.register(CustomUser, CustomUserAdmin)
